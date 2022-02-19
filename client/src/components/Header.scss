@@ -1,4 +1,80 @@
 .header {
   background-color: var(--primary);
   font-size: 1.6rem;
+  // height: 100vh;
+  overflow: hidden;
+
+  &__grid {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 2rem 0;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    &:nth-child(1) {
+      padding: 4rem 1rem;
+      & h1 {
+        font-size: 5rem;
+        font-family: "Libre Caslon Text";
+        font-weight: 200;
+      }
+      & p {
+        font-size: 1.8rem;
+        padding: 1rem 0;
+      }
+    }
+
+    &:nth-child(2) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-left: 6rem;
+
+      & div {
+        border-radius: 0.4rem;
+        overflow: hidden;
+
+        & img {
+          // height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.social {
+  z-index: 100;
+  position: absolute;
+  width: 105%;
+  div {
+    display: block;
+    background: var(--tertiary);
+    padding: 30px;
+    position: relative;
+    transform: rotate(0deg) skew(50deg);
+    box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 100%;
+      left: -20px;
+      top: 8px;
+      background: var(--primary);
+      transform: rotate(0deg) skewY(-40deg);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -16px;
+      left: -9px;
+      height: 20px;
+      width: 100%;
+      transform: rotate(0deg) skewX(-50deg);
+      background: var(--primary);
+    }
+  }
 }
