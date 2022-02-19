@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital@0;1&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,300&display=swap");
+
+:root {
+  --primary: #85d9ff;
+  --secondary: #1fb9ff;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Montserrat";
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 62.5%;
+
+  @media screen and (min-width: 900px) {
+    font-size: 56.25%;
+  }
+}

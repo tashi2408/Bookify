@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
-import "./App.css";
+import "./App.scss";
+import Home from "./pages/Home";
 
 function App() {
   return (
@@ -10,7 +11,9 @@ function App() {
         <link rel="canonical" href="http://mysite.com/example" />
         <meta name="description" content="Place to connect with bookworms" />
       </Helmet>
-      <div>HELLO WORLD!!!</div>
+      <div>
+        <Home />
+      </div>
     </div>
   );
 }
